@@ -1,0 +1,12 @@
+/**
+ * main application generic styles
+ */
+
+html {
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 100px 0 0 150px;
+}

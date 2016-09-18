@@ -1,0 +1,44 @@
+.hourCell {
+  height: 60px;
+  width: 620px;
+  border: 2px solid #F0F0F0;
+  border-bottom: none;
+}
+
+/* Get the last hour cell to place a border on the bottom */
+.hourCell:last-child {
+  border-bottom: 2px solid #F0F0F0;
+}
+
+.time {
+  color: #5A5C60;
+  left: -70px;
+  position: relative;
+  text-align: right;
+  width: 65px;
+}
+
+.hourTime {
+  font-weight: bold;
+  top: -12px;
+}
+
+.timeDigits {
+  display: inline-block;
+  margin-top: 3px;
+  margin-right: 5px;
+}
+
+.timePeriod {
+  font-weight: normal;
+}
+
+.timePeriod, .halfHourTime {
+  color: #B5B5B5;
+  font-size: .60rem;
+  top: 8px;
+}
+
+.halfHourTime {
+
+}
