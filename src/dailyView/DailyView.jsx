@@ -4,6 +4,7 @@
  */
 
 import * as React from 'react';
+import styles from './DailyViewStyles.css';
 
 import HourCell from './hourCell/HourCell';
 import EventsContainer from './eventsContainer/EventsContainer';
@@ -29,8 +30,13 @@ function DailyView(props) {
   const hours = 11;
 
   return (
-    <div>
-      {renderHourCells(startTime, hours)}
+    <div className={styles.dailyView}>
+      <div className={styles.hourGrid}>
+        {renderHourCells(startTime, hours)}
+      </div>
+      <div className={styles.eventsGrid}>
+        <EventsContainer events={props.events}/>
+      </div>
     </div>
   );
 }

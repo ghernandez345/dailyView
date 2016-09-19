@@ -26,6 +26,8 @@ function HourCell(props) {
         <span>{halfHourTime.hour}:</span>
         <span>{halfHourTime.minutes}</span>
       </div>
+
+      {/* TODO: do end time */}
       {/* <span></span> */}
     </div>
   );

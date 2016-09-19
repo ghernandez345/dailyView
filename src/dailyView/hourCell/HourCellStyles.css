@@ -1,13 +1,15 @@
 .hourCell {
-  height: 60px;
-  width: 620px;
   border: 2px solid #F0F0F0;
   border-bottom: none;
+  display: inline-block;
+  height: 58px;
+  width: 620px;
 }
 
 /* Get the last hour cell to place a border on the bottom */
 .hourCell:last-child {
   border-bottom: 2px solid #F0F0F0;
+  height: 56px;
 }
 
 .time {
@@ -37,8 +39,4 @@
   color: #B5B5B5;
   font-size: .60rem;
   top: 8px;
-}
-
-.halfHourTime {
-
 }

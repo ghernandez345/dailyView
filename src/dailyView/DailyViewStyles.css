@@ -1,0 +1,16 @@
+.dailyView {
+  position: relative;
+}
+
+.hourGrid {
+
+}
+
+.eventsGrid {
+  height: 720px;
+  left: 2px;
+  padding: 0 10px;
+  position: absolute;
+  top: 0;
+  width: 600px;
+}

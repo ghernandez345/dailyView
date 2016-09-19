@@ -3,12 +3,19 @@
  */
 
 import * as React from 'react';
+import styles from './EventsContainerStyles.css';
 
-function EventsContainer(events) {
+function renderEvents(events) {
+  console.log(events);
+  return events.map((event) => {
 
+  });
+}
+
+function EventsContainer(props) {
   return (
-    <div>
-      
+    <div className={styles.eventsContainer}>
+      {renderEvents(props.events)}
     </div>
   );
 }
