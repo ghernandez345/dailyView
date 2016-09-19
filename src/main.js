@@ -18,6 +18,5 @@ function layOutDay(events) {
   );
 }
 
-window.layOutDay = layOutDay;
-
+export default window.layOutDay = layOutDay;
 window.layOutDay(mockData);
