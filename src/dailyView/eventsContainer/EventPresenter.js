@@ -20,16 +20,24 @@ function collidesWith(event1, event2) {
   return event1.end > event2.start && event1.start < event2.end;
 }
 
+function calculateLeftOffset(eventIndex, numEventColumns) {
+  return (eventIndex / numEventColumns) * 100 + '%';
+}
+
+function calculateWidth(viewWidth, numEventColumns) {
+  return viewWidth / numEventColumns;
+}
+
 function packEvents(eventColumns, viewWidth) {
   const numEventColumns = eventColumns.length;
 
   for (let i = 0; i < numEventColumns; i++) {
-    const col = eventColumns[i];
+    const eventColumn = eventColumns[i];
 
-    for (let j = 0; j < col.length; j++) {
-      var bubble = col[j];
-      bubble.obj.css('left', (i / numEventColumns) * 100 + '%');
-      bubble.obj.css('width', viewWidth / numEventColumns - 1);
+    for (let j = 0; j < eventColumn.length; j++) {
+      var eventTag = eventColumn[j];
+      eventTag.left = calculateLeftOffset(i, numEventColumns);
+      eventTag.width = calculateWidth(viewWidth, numEventColumns);
     }
   }
 }
@@ -37,8 +45,8 @@ function packEvents(eventColumns, viewWidth) {
 export const EventPresenter = {
 
   generateEventPresenterData(events, viewWidth) {
-    const prevEventEnd = null;
-    const eventColumns = [];
+    let prevEventEnd = null;
+    let eventColumns = [];
     events = sortEvents(events);
 
     events.forEach((event, i) => {
@@ -55,19 +63,19 @@ export const EventPresenter = {
       }
 
       // Try to place the event inside the existing columns
-      let placed = false;
+      let isInserted = false;
       for (let i = 0; i < eventColumns.length; i++) {
         let col = eventColumns[i];
         if (!collidesWith(col[col.length-1], event)) {
           col.push(event);
-          placed = true;
+          isInserted = true;
           break;
         }
       }
 
       // It was not possible to place the event. Add a new column
       // for the current event group.
-      if (!placed) {
+      if (!isInserted) {
         eventColumns.push([event]);
       }
 

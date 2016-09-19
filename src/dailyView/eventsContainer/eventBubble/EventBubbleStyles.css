@@ -1,0 +1,19 @@
+.eventBubble {
+  background: #F5F5F5;
+  border-left-style: solid;
+  border-left-color: #47B28D;
+  color: #47B28D;
+  position: absolute;
+}
+
+.eventTitle {
+  display: block;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.eventLocation {
+  color: #B5B5B5;
+  display: block;
+  font-size: .60rem;
+}

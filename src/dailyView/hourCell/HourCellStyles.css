@@ -1,7 +1,6 @@
 .hourCell {
   border: 2px solid #F0F0F0;
   border-bottom: none;
-  display: inline-block;
   height: 58px;
   width: 620px;
 }
@@ -38,5 +37,5 @@
 .timePeriod, .halfHourTime {
   color: #B5B5B5;
   font-size: .60rem;
-  top: 8px;
+  top: 4px;
 }

@@ -20,5 +20,4 @@ function layOutDay(events) {
 
 window.layOutDay = layOutDay;
 
-// TODO: remove when done;
 window.layOutDay(mockData);
