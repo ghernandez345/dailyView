@@ -12,7 +12,6 @@ import EventBubble from './eventBubble/EventBubble';
 const VIEW_WIDTH = 600;
 
 function renderEvents(events) {
-  console.log(events);
   return events.map((event, i) => {
     return (
       <EventBubble key={i} event={event} />
