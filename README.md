@@ -2,9 +2,9 @@
 
 Renders daily view component that takes in collection of
 
-to use open `index.html` in a browser.
+to view, open `index.html` in a browser.
 
-to run in dev run:
+to run in dev:
 
 `npm install`
 
